@@ -161,6 +161,8 @@ ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.stu
 --
 
 COPY public.school_boards (id, name) FROM stdin;
+1	CSM
+2	CSMB
 \.
 
 
@@ -168,7 +170,7 @@ COPY public.school_boards (id, name) FROM stdin;
 -- Name: school_boards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.school_boards_id_seq', 1, false);
+SELECT pg_catalog.setval('public.school_boards_id_seq', 2, true);
 
 
 --
@@ -183,7 +185,7 @@ COPY public.student_grade (id, student_id, grade) FROM stdin;
 -- Name: student_grade_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.student_grade_id_seq', 1, false);
+SELECT pg_catalog.setval('public.student_grade_id_seq', 17, true);
 
 
 --
@@ -198,7 +200,7 @@ COPY public.students (id, name, school_board_id) FROM stdin;
 -- Name: students_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.students_id_seq', 1, false);
+SELECT pg_catalog.setval('public.students_id_seq', 6, true);
 
 
 --
